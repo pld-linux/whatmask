@@ -2,7 +2,7 @@ Summary:	Address format change and calculation utility
 Summary(pl):	Narzêdzie do zmiany formatu i przeliczania adresów
 Name:		whatmask
 Version:	1.1
-Release:	1
+Release:	2
 License:	GPL
 Group:		Networking/Utilities
 Source0:	http://www.laffeycomputer.com/current_builds/whatmask/%{name}-%{version}.tar.gz
