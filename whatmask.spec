@@ -26,6 +26,16 @@ netmask in any format, and it will echo back the netmask in three
 formats, the network address, the broadcast address, the number of
 useable IPs, and the range of IPs in the subnet.
 
+%description -l pl
+whatmask to niewielki program w C pomagaj±cy przy konfiguracji sieci.
+Obs³ugiwane notacje to CIDR (np. /24), maska sieci (np. 255.255.255.0)
+i maska Wildcatd (np. 0.0.0.255). Te notacje znacz± to samo. Notacja
+CIDR zazwyczaj ma "/" przed liczb± (oznaczaj±c± liczbê bitów).
+whatmask akceptuje te notacje z lub bez "/". Mo¿e przyj±æ dowolny
+adres IP w podsieci wraz z mask± w dowolnym formacie, a wypisze maskê
+w trzech formatach, adres sieci, adres broadcastu, liczbê u¿ywalnych
+IP oraz zakres IP w podsieci.
+
 %prep
 %setup -q
 
