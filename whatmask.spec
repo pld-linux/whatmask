@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		Networking/Utilities
 Source0:	http://www.laffeycomputer.com/current_builds/whatmask/%{name}-%{version}.tar.gz
+# Source0-md5:	2fa6b1bb18f037d0f9c3c8b2eed19277
 URL:		http://www.laffeycomputer.com/whatmask.html
 BuildRequires:	automake
 BuildRequires:	autoconf
