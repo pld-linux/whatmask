@@ -39,7 +39,7 @@ IP oraz zakres IP w podsieci.
 rm -rf missing
 aclocal
 autoconf
-automake -a -c
+automake -a -c -f
 %configure
 %{__make}
 
