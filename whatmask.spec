@@ -37,7 +37,7 @@ IP oraz zakres IP w podsieci.
 
 %build
 rm -rf missing
-aclocal
+%{__aclocal}
 %{__autoconf}
 %{__automake}
 %configure
