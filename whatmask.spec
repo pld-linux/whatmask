@@ -3,7 +3,7 @@ Summary(pl):	Narzêdzie do zmiany formatu i przeliczania adresów
 Name:		whatmask
 Version:	1.1
 Release:	2
-License:	GPL
+License:	GPL v2
 Group:		Networking/Utilities
 Source0:	http://www.laffeycomputer.com/current_builds/whatmask/%{name}-%{version}.tar.gz
 # Source0-md5:	2fa6b1bb18f037d0f9c3c8b2eed19277
@@ -47,7 +47,8 @@ rm -rf missing
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} DESTDIR=$RPM_BUILD_ROOT install
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 
 %clean
