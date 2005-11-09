@@ -1,12 +1,12 @@
 Summary:	Address format change and calculation utility
 Summary(pl):	Narzêdzie do zmiany formatu i przeliczania adresów
 Name:		whatmask
-Version:	1.1
-Release:	2
+Version:	1.2
+Release:	1
 License:	GPL v2
 Group:		Networking/Utilities
-Source0:	http://www.laffeycomputer.com/current_builds/whatmask/%{name}-%{version}.tar.gz
-# Source0-md5:	2fa6b1bb18f037d0f9c3c8b2eed19277
+Source0:	http://downloads.laffeycomputer.com/current_builds/whatmask/%{name}-%{version}.tar.gz
+# Source0-md5:	26aeff74dbba70262ccd426e681dcf4a
 URL:		http://www.laffeycomputer.com/whatmask.html
 BuildRequires:	automake
 BuildRequires:	autoconf
@@ -58,3 +58,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README AUTHORS NEWS ChangeLog
 %attr(755,root,root) %{_bindir}/*
+%{_mandir}/man1/*
