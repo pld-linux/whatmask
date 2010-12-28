@@ -3,13 +3,13 @@ Summary(pl.UTF-8):	Narzędzie do zmiany formatu i przeliczania adresów
 Name:		whatmask
 Version:	1.2
 Release:	1
-License:	GPL v2
+License:	GPL v2+
 Group:		Networking/Utilities
 Source0:	http://downloads.laffeycomputer.com/current_builds/whatmask/%{name}-%{version}.tar.gz
 # Source0-md5:	26aeff74dbba70262ccd426e681dcf4a
 URL:		http://www.laffeycomputer.com/whatmask.html
-BuildRequires:	automake
 BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -24,20 +24,20 @@ formats, the network address, the broadcast address, the number of
 useable IPs, and the range of IPs in the subnet.
 
 %description -l pl.UTF-8
-whatmask to niewielki program w C pomagający przy konfiguracji sieci.
-Obsługiwane notacje to CIDR (np. /24), maska sieci (np. 255.255.255.0)
-i maska Wildcatd (np. 0.0.0.255). Te notacje znaczą to samo. Notacja
-CIDR zazwyczaj ma "/" przed liczbą (oznaczającą liczbę bitów).
-whatmask akceptuje te notacje z lub bez "/". Może przyjąć dowolny
-adres IP w podsieci wraz z maską w dowolnym formacie, a wypisze maskę
-w trzech formatach, adres sieci, adres broadcastu, liczbę używalnych
-IP oraz zakres IP w podsieci.
+Whatmask to niewielki program napisany w C pomagający przy
+konfiguracji sieci. Obsługiwane notacje to CIDR (np. /24), maska sieci
+(np. 255.255.255.0) i maska Wildcard (np. 0.0.0.255). Wszytkie notacje
+są zamienne. Notacja CIDR zazwyczaj posiada "/" przed liczbą
+(oznaczającą liczbę bitów). whatmask akceptuje te notacje z lub bez
+"/". Może przyjąć dowolny adres IP w podsieci wraz z maską w dowolnym
+formacie, a wypisze maskę w trzech formatach, adres sieci, adres
+broadcastu, liczbę używalnych IP oraz zakres IP w podsieci.
 
 %prep
 %setup -q
 
 %build
-rm -rf missing
+%{__rm} -r missing
 %{__aclocal}
 %{__autoconf}
 %{__automake}
@@ -57,5 +57,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README AUTHORS NEWS ChangeLog
-%attr(755,root,root) %{_bindir}/*
-%{_mandir}/man1/*
+%attr(755,root,root) %{_bindir}/whatmask
+%{_mandir}/man1/whatmask.1*
